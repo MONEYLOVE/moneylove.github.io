@@ -1,0 +1,49 @@
+		<div class="container">
+<div class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputEmail1">总共欠款</label>
+		<input class="form-control" id="exampleInputEmail1" value="" [(ngModel)]="amount"/>元，
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputEmail1">每月还款</label>
+		<input class="form-control" [(ngModel)]="permonth"/>元，
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">每月利率</label>
+		<input  class="form-control" [(ngModel)]="percent"/>，
+  </div>
+  <div class="form-group">
+		从<input class="form-control" [(ngModel)]="date"/>开始还，
+  </div>
+  <div class="form-group">
+		第几月未还<input class="form-control" [(ngModel)]="except"/>，
+  </div>
+  
+  <div class="form-group">
+		再次借款（第X个月:再借X元）<input class="form-control" [(ngModel)]="again"/>，
+  </div>
+  
+  <div class="form-group">
+		<button class="btn btn-default" (click)="test()" value="计算" type="button">计算</button>
+  </div>
+
+
+  </div>
+		<p>
+		</p>
+		<div class="row">
+		<div class="col-sm-6">
+		<h2>叶美玲还款记录</h2>
+		<table id="table-1" class="table table-bordered">
+		<tr *ngFor="let item of list_item">
+		<td>{{item.current}}</td>
+		<td>第{{item.m}}个月</td>
+		<td>还{{item.diff}}元</td>
+		<td>{{item.againMonth}}</td>
+		<td>还欠{{item.total}}元</td>		
+		</tr>
+		</table>
+		</div>
+		</div>
+		</div>
