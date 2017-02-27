@@ -1,6 +1,6 @@
 SystemJS.config({
   map: {
-    "typescript": "http://localhost:8080/typescript.min.js",
+    "typescript": "//cdn.bootcss.com/typescript/2.2.1-insiders.20170209/typescript.min.js",
     "babel": "http://localhost:8080/browser.min.js",
     "traceur": "http://localhost:8080/browser.min.js"
     // "babel": "//cdn.bootcss.com/babel-core/6.1.19/browser.min.js"
